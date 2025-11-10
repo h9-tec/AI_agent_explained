@@ -1,0 +1,22 @@
+# Core LLM Dependencies
+llama-cpp-python>=0.2.0  # Python bindings for llama.cpp
+openai>=1.0.0  # Keep for backward compatibility with original modules
+
+# Agent Frameworks
+crewai>=0.11.0  # Multi-agent orchestration framework
+crewai-tools>=0.2.0  # Pre-built tools for CrewAI
+langchain>=0.1.0  # Optional: for advanced integrations
+langchain-community>=0.0.10  # Community integrations
+
+# Utilities
+python-dotenv>=1.0.0  # Environment variable management
+pydantic>=2.0.0  # Data validation
+requests>=2.31.0  # HTTP requests for tools
+rich>=13.0.0  # Beautiful terminal output
+
+# Development Tools (optional)
+ruff>=0.1.0  # Linting and formatting
+mypy>=1.7.0  # Type checking
+pytest>=7.4.0  # Testing framework
+pytest-cov>=4.1.0  # Coverage reporting
+
