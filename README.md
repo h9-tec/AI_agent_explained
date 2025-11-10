@@ -96,24 +96,56 @@ python module_0_agent_llamacpp.py
 
 **Philosophy:** We build everything from scratch first (Modules 0-3), then introduce frameworks (Module 4+). This way, you understand what the frameworks are doing under the hood.
 
-## Course Files
+## Repository Structure
 
-### Core Modules (Build from Scratch)
 ```
-├── module_0_agent.py                 # The simplest agent: a 50-line loop
-├── module_1_tool_agent.py            # Adding tools: function calling
-├── module_2_memory_agent.py          # Adding memory: conversation state
-├── module_3_react_agent.py           # Adding reasoning: ReAct pattern
-└── [Documentation: module_*.md]
-```
-
-### Extended Modules (Local Models + Frameworks)
-```
-├── config.py                         # Configuration system (built from scratch)
-├── llm_client.py                     # Unified LLM client (understand the abstraction)
-├── module_*_llamacpp.py              # Same agents, works with local models
-├── module_4_crewai_agents.py         # Multi-agent orchestration (now you're ready)
-└── [Documentation: SETUP_GUIDE.md, EXTENSION_SUMMARY.md]
+ai_agents_course/
+├── module_0_agent_loop/          # The basic agent loop
+│   ├── README.md                 # Module overview and exercises
+│   ├── module_0_agent.py         # Original OpenAI version
+│   ├── module_0_agent_llamacpp.py # Extended llama.cpp version
+│   └── module_0_agent_loop.md    # Detailed theory
+│
+├── module_1_tool_use/            # Tool calling and APIs
+│   ├── README.md
+│   ├── module_1_tool_agent.py
+│   ├── module_1_tool_agent_llamacpp.py
+│   └── module_1_tool_use.md
+│
+├── module_2_memory_state/        # Memory and conversation state
+│   ├── README.md
+│   ├── module_2_memory_agent.py
+│   ├── module_2_memory_agent_llamacpp.py
+│   └── module_2_memory_state.md
+│
+├── module_3_planning_reasoning/  # ReAct pattern
+│   ├── README.md
+│   ├── module_3_react_agent.py
+│   ├── module_3_react_agent_llamacpp.py
+│   └── module_3_planning_reasoning.md
+│
+├── module_4_multi_agent/         # Multi-agent with CrewAI
+│   ├── README.md
+│   ├── module_4_crewai_agents.py
+│   └── module_4_crewai.md
+│
+├── docs/                         # All documentation
+│   ├── README.md                 # Documentation index
+│   ├── EXERCISES.md              # Hands-on exercises
+│   ├── EXAMPLES.md               # Real-world examples
+│   ├── DEBUGGING_GUIDE.md        # Troubleshooting
+│   ├── SETUP_GUIDE.md            # Installation and setup
+│   ├── QUICK_REFERENCE.md        # Command cheat sheet
+│   └── [More guides...]
+│
+├── examples/                     # Complete applications
+│   ├── README.md
+│   └── advanced_example_full_agent.py
+│
+├── config.py                     # Configuration system
+├── llm_client.py                 # Unified LLM client
+├── requirements.txt              # Dependencies
+└── README.md                     # This file
 ```
 
 **The Pattern:** Build it yourself → Understand it deeply → Use frameworks wisely
@@ -122,17 +154,23 @@ python module_0_agent_llamacpp.py
 
 ### For Self-Study
 
-1. **Read the module content** (`.md` files) first to understand the concepts
-2. **Study the code** (`.py` files) line by line. Don't just run it; understand it
-3. **Complete the exercises** (`EXERCISES.md`) - hands-on practice for each module
-4. **Debug failures** (`DEBUGGING_GUIDE.md`) - learn from what goes wrong
-5. **Study examples** (`EXAMPLES.md`) - see real-world applications
-6. **Move to the next module** only when you feel confident
+1. **Start with a module** - Read the module's `README.md`
+2. **Study the theory** - Read the detailed `.md` file
+3. **Run the code** - Execute both versions (OpenAI and llama.cpp)
+4. **Complete exercises** - See `docs/EXERCISES.md`
+5. **Debug issues** - Use `docs/DEBUGGING_GUIDE.md`
+6. **Study examples** - Check `docs/EXAMPLES.md`
+7. **Move to next module** - Only when you feel confident
 
-**Learning Resources:**
-- `EXERCISES.md` - Hands-on exercises for each module
-- `DEBUGGING_GUIDE.md` - How to debug agents systematically
-- `EXAMPLES.md` - Complete real-world examples
+**Learning Path:**
+```
+Module README → Theory → Code → Exercises → Debug → Examples → Next Module
+```
+
+**Key Resources:**
+- Each module has its own `README.md` with quick start and exercises
+- `docs/` folder contains all guides and references
+- `examples/` folder has complete applications
 
 ### For Teaching
 
